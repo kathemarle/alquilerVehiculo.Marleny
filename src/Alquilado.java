@@ -1,3 +1,6 @@
+
+import java.time.LocalDate;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,19 +12,20 @@
  * @author marleny
  */
 public class Alquilado {
+
     private Cliente cliente;
     private Vehiculo vehiculo;
-    private int diaAlquiler;
-    private int mesAlquiler;
-    private int añoAlquiler;
+    private LocalDate diaAlquiler;
+    private LocalDate mesAlquiler;
+    private LocalDate anioAlquiler;
     private int totalDiasAlquiler;
 
-    public Alquilado(Cliente cliente, Vehiculo vehiculo, int diaAlquiler, int mesAlquiler, int añoAlquiler, int totalDiasAlquiler) {
+    public Alquilado(Cliente cliente, Vehiculo vehiculo, LocalDate diaAlquiler, LocalDate mesAlquiler, LocalDate anioAlquiler, int totalDiasAlquiler) {
         this.cliente = cliente;
         this.vehiculo = vehiculo;
         this.diaAlquiler = diaAlquiler;
         this.mesAlquiler = mesAlquiler;
-        this.añoAlquiler = añoAlquiler;
+        this.anioAlquiler = anioAlquiler;
         this.totalDiasAlquiler = totalDiasAlquiler;
     }
 
@@ -41,28 +45,28 @@ public class Alquilado {
         this.vehiculo = vehiculo;
     }
 
-    public int getDiaAlquiler() {
+    public LocalDate getDiaAlquiler() {
         return diaAlquiler;
     }
 
-    public void setDiaAlquiler(int diaAlquiler) {
+    public void setDiaAlquiler(LocalDate diaAlquiler) {
         this.diaAlquiler = diaAlquiler;
     }
 
-    public int getMesAlquiler() {
+    public LocalDate getMesAlquiler() {
         return mesAlquiler;
     }
 
-    public void setMesAlquiler(int mesAlquiler) {
+    public void setMesAlquiler(LocalDate mesAlquiler) {
         this.mesAlquiler = mesAlquiler;
     }
 
-    public int getAñoAlquiler() {
-        return añoAlquiler;
+    public LocalDate getAñoAlquiler() {
+        return anioAlquiler;
     }
 
-    public void setAñoAlquiler(int añoAlquiler) {
-        this.añoAlquiler = añoAlquiler;
+    public void setAñoAlquiler(LocalDate añoAlquiler) {
+        this.anioAlquiler = añoAlquiler;
     }
 
     public int getTotalDiasAlquiler() {
@@ -72,7 +76,11 @@ public class Alquilado {
     public void setTotalDiasAlquiler(int totalDiasAlquiler) {
         this.totalDiasAlquiler = totalDiasAlquiler;
     }
-    
-    
-    
+
+    @Override
+    public String toString() {
+        return "Alquilado{" + "cliente=" + cliente + ", vehiculo=" + vehiculo + ", diaAlquiler=" + diaAlquiler + ", mesAlquiler=" + mesAlquiler + ", a\u00f1oAlquiler=" + anioAlquiler + ", totalDiasAlquiler=" + totalDiasAlquiler + '}';
+    }
 }
+   
+   
