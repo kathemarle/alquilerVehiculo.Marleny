@@ -1,4 +1,3 @@
-
 import java.time.LocalDate;
 
 /**
@@ -31,16 +30,18 @@ public class EmpresaAlquilerVehiculos {
     //constructor parametrizado:total de clientes=50, y tambien
     //el total de vehiculos disponibles.el histórico de vehiculos
     //puede contener hasta 100elementos.
-    public EmpresaAlquilerVehiculos(String cif, String nombre, String paginaWeb, int totalClientes, Cliente[] clientes, int totalVehiculos, Vehiculo[] vehiculo, int totalAlquileres, Alquilado[] alquileres) {
+    public EmpresaAlquilerVehiculos(String cif, String nombre, String paginaWeb){ 
+           
         this.cif = cif;
         this.nombre = nombre;
         this.paginaWeb = paginaWeb;
-        this.totalClientes = totalClientes;
-        this.clientes = clientes;
-        this.totalVehiculos = totalVehiculos;
-        this.vehiculo = vehiculo;
-        this.totalAlquileres = totalAlquileres;
-        this.alquileres = alquileres;
+        this.totalClientes = 0;
+        this.clientes = new Cliente[50];
+        this.totalVehiculos = 0;
+        this.vehiculo = new Vehiculo[50];
+        this.totalAlquileres = 0;
+        this.alquileres = new Alquilado[100];
+        
     }
 
     public String getCif() {
@@ -218,7 +219,17 @@ public class EmpresaAlquilerVehiculos {
         if (vehiculo != null) {
             vehiculo.setDisponible(true);
         }
-
+        
     }
+    //metodo burbuja:cliente y alquilado
+    public void ordenarCliente(String NIF){
+        
+    
+            
+    
+}
+    
+    
 
 }
+    
